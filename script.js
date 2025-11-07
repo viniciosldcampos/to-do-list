@@ -10,5 +10,13 @@ function addTask() {
     if(taskText !== "") {
         const maxText = taskText.substring(0, 35); // Cria limitação de 35 primeiros caracteres da tarefa.
         const li = document.createElement("li"); // Cria dinamicamente um novo elemento de lista (<li>) para inserir dentro do <ul>.
+
+        // Define o conteúdo interno do <li> com HTML: <span> mostra o texto da tarefa. Cria dois botões: Editar Task e Remover Task passando o próprio botão (this) que representa o elemento atual que acionou o evento (nesse caso, o botão clicado).
+        li.innerHTML = `
+            <span>${maxText}</span>
+            <button class="editButton" onclick="editTask(this)">Editar Task</button>
+            <button class="removeButton" onclick="removeTask(this)">Remover Task</button>
+        `;
     }
+
 }
