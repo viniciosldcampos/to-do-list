@@ -36,3 +36,10 @@ function editTask(button) {
     }
     // Verifica se o usuário não cancelou (null) e se o texto não está vazio. Se for válido, atualiza o conteúdo do <span> com o novo texto.
 }
+
+// Define a função para remover uma tarefa da lista.
+function removeTask(button) {
+    const li = button.parentElement; // Acessa o <li> que contém o botão clicado.
+
+    taskList.removeChild(li); // Remove aquele <li> da <ul> (ou seja, elimina a tarefa da lista).
+}
