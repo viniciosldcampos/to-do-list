@@ -17,6 +17,7 @@ function addTask() {
             <button class="editButton" onclick="editTask(this)">Editar Task</button>
             <button class="removeButton" onclick="removeTask(this)">Remover Task</button>
         `;
+        taskList.appendChild(li); // Insere o novo <li> no final da lista (<ul>).
+        taskInput.value = ""; // Limpa o campo de texto após adicionar a tarefa, deixando pronto para a próxima entrada.    
     }
-
 }
